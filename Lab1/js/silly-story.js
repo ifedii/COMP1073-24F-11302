@@ -5,7 +5,7 @@
 - randomize for the button
 - story for the paragraph that outputs the final story
 */
-let customName = document.querySelector("#customename");
+let customName = document.querySelector("#customname");
 let randomize = document.querySelector(".randomize")
 let story = document.querySelector(".story")
 /* STEP 3: Create the variable that contains the story string that will be modified - use var storyText to containt the following:
@@ -46,14 +46,15 @@ function result() {
 	var zItem = randomValueFromArray(insertZ);
 	/* STEP 9: Replace the three placeholders in the newStory string — :insertx:, :inserty:, and :insertz: — with the strings stored in xItem, yItem, and zItem. Each time, be sure to update the variable newStory (with +=). You might need to do one of the above replacements twice! */
 
-	newStory.replace("insertx", xItem)
-	newStory.replace("insertx", xItem)
-	newStory.replace("inserty", yItem)
-	newStory.replace("insertz", zItem)
+	newStory = newStory.replace(":insertx:", xItem)
+	newStory = newStory.replace(":insertx:", xItem)
+	newStory = newStory.replace(":inserty:", yItem)
+	newStory = newStory.replace(":insertz:", zItem)
 	/* STEP 10: If the user has typed a name in the customName field, replace the name 'Bob' in the story with whatever they typed */
 	if(customName.value != '') {
-		newStory.replace(xItem, customName,value)
-		newStory.replace(xItem, customName,value)
+		newStory = newStory.replace(xItem, customName.value)
+		newStory = newStory.replace(xItem, customName.value)
+		customName.value = "";
 
 	}
 	/* STEP 11: If the metric radio button has been checked, we need to convert the temperature and mass numbers in the story */

@@ -31,7 +31,7 @@ let insertz = ["spontaneously combusted", "rapidly sublimated", "evaporated inst
 
 /* STEP 2: have a look at the following function - if you call this function and pass it an array, it will return one of the elements of that array randomly */
 function randomValueFromArray(array){
-	return array[Math.floor(Math.random()*array.length)];
+	return array[Math.floor(Math.random()*array.lngth)];
 }
 
 /* STEP 6: Review the partially complete result() function below */

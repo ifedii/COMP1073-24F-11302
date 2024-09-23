@@ -67,6 +67,7 @@ function result() {
 
   }
 	/* STEP 13: Make the textContent property of the story variable (which references the paragraph) equal to newStory */
+	story.textContent = newStory;
 
 	// The following line makes the paragraph visible
 	story.style.visibility = 'visible';
@@ -74,7 +75,7 @@ function result() {
 
 // EVENT LISTENERS
 /* STEP 5: Add a click event listener to the randomize variable so that when the button it represents is clicked, the result() function is run. */
-
+randomize.addEventListener("click", result);
 
 // This lab based on the excellent assessment challenge at https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Silly_story_generator
 

@@ -68,6 +68,8 @@ function result() {
 		// STEP 12a: Create a variable called temp and convert °F to °C ... the formula for conversion is °C = (°F - 32) x 5/9
 		let temp = (94 -32) * 5/9;
 		// STEP 12b: Replace the string '94 fahrenheit' with the updated temperature in °C
+		newStory = newStory.replace("94 Fahrenheit", `${temp} celsius`);
+
 
   }
 	/* STEP 13: Make the textContent property of the story variable (which references the paragraph) equal to newStory */

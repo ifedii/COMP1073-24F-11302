@@ -23,9 +23,9 @@ Area 51, Death Valley, Aruba
 spontaneously combusted, rapidly sublimated, evaporated instantly
 */
 
-let insertx = ["Donald Trump", "Jackie Chan", "Santa Claus"]
-let inserty = ["Area 51", "Death Valley", "Aruba"]
-let insertz = ["spontaneously combusted", "rapidly sublimated", "evaporated instantly"]
+let insertX = ["Donald Trump", "Jackie Chan", "Santa Claus"]
+let insertY = ["Area 51", "Death Valley", "Aruba"]
+let insertZ = ["spontaneously combusted", "rapidly sublimated", "evaporated instantly"]
 
 // FUNCTIONS
 
@@ -37,11 +37,13 @@ function randomValueFromArray(array){
 /* STEP 6: Review the partially complete result() function below */
 function result() {
 	// STEP 7: Create a new variable called newStory and set it to the value of storyText - we don't want to overwrite the original story!
-
+	let newStory = storyText
 	/* STEP 8: Use the randomValueFromArray() function to generate a value for each of three new variables - xItem, yItem, and zItem
 	Call up the function and for each variable, pass it the array from which to grab a random string - for example if insertW was an array of strings, I would type:
-	var wItem = randomValueFromArray(insertW);
-
+	var wItem = randomValueFromArray(insertW);*/
+	var xItem = randomValueFromArray(insertX);
+	var yItem = randomValueFromArray(insertY);
+	var zItem = randomValueFromArray(insertZ);
 	/* STEP 9: Replace the three placeholders in the newStory string — :insertx:, :inserty:, and :insertz: — with the strings stored in xItem, yItem, and zItem. Each time, be sure to update the variable newStory (with +=). You might need to do one of the above replacements twice! */
 
 	/* STEP 10: If the user has typed a name in the customName field, replace the name 'Bob' in the story with whatever they typed */

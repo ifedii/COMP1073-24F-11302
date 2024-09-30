@@ -58,6 +58,7 @@ function cycleArray(sentencePart){
 
     }
 
+    document.querySelector(`#${sentencePart.toLowerCase()}`).textContent = word;
     selection.textContent = `${sentencePart}: ${word}`;
     capture(sentencePart, word)
 

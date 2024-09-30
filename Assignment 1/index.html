@@ -7,23 +7,37 @@
 
     <script src="/Assignment 1/JS/script.js" defer></script>
 
-    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="./CSS/style.css">
 </head>
 <body>
 
     <p id="storyResult"></p>
     <p id="selection"></p>
 
-    <button class="cycle">Character</button>
-    <button class="cycle">Action</button>
-    <button class="cycle">Description</button>
-    <button class="cycle">Sidekick</button>
-    <button class="cycle">Setting</button>
+   <div class="selections">
+        <div class="buttons">
+            <button class="cycle">Character</button>
+            <button class="cycle">Action</button>
+            <button class="cycle">Description</button>
+            <button class="cycle">Sidekick</button>
+            <button class="cycle">Setting</button>
+        </div>
+    
+        <div class="displaySelections">
+            <p id="character">placeholder</p>
+            <p id="action">placeholder</p>
+            <p id="description">placeholder</p>
+            <p id="sidekick">placeholder</p>
+            <p id="setting">placeholder</p>
+        </div>
+   </div>
 
 
-    <button id="result">View result</button>
+    <div class="controls">
+        <button id="result">View result</button>
     <!-- <button id="reset">Reset Story</button> -->
-    <button id="randomize">Suprise Me</button>
+        <button id="randomize">Suprise Me</button>
+    </div>
 
     
 </body>

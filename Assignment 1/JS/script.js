@@ -3,6 +3,7 @@ let buttons = document.querySelectorAll(".cycle")
 let displayResult = document.querySelector("#result")
 let selection = document.querySelector("#selection")
 let resetBtn = document.querySelector("#reset")
+let randomize = document.querySelector("#randomize")
 
 let characters = ["Donald Trump", "Jackie Chan", "Santa Claus", "Will Smith"]
 let actions = ["ran", "saw", "kicked", "pushed"]
@@ -104,9 +105,23 @@ function resetStory(){
     descIndex = 0;
     sidekickIndex = 0;
     settingIndex = 0;
-    storyResult.textContent = "";
+    // storyResult.textContent = "";
     story = ":character: :action: :description: :sidekick: :setting:";
 
 }
 
-resetBtn.addEventListener("click", resetStory)
+// resetBtn.addEventListener("click", resetStory)
+
+
+// random story
+randomize.addEventListener("click", () =>
+{
+    story = story.replace(":character:", characters[Math.floor(Math.random()*characters.length)])
+    story = story.replace(":action:", actions[Math.floor(Math.random()*actions.length)])
+    story = story.replace(":description:", descriptions[Math.floor(Math.random()*descriptions.length)])
+    story = story.replace(":sidekick:", sidekicks[Math.floor(Math.random()*sidekicks.length)])
+    story = story.replace(":setting:", settings[Math.floor(Math.random()*settings.length)])
+
+    storyResult.textContent = story;
+    resetStory();
+})

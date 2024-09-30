@@ -1,4 +1,4 @@
-// html variables
+// html variables for manipulation
 let storyResult = document.querySelector("#storyResult")
 let buttons = document.querySelectorAll(".cycle")
 let displayResult = document.querySelector("#result")
@@ -6,12 +6,13 @@ let selection = document.querySelector("#selection")
 let resetBtn = document.querySelector("#reset")
 let randomize = document.querySelector("#randomize")
 
+// ---- JS VARIABLES -----
 // array of selections
 let characters = ["Donald Trump", "Jackie Chan", "Santa Claus", "Will Smith"]
-let actions = ["ran", "saw", "kicked", "pushed"]
+let actions = ["slapped", "saw", "kicked", "pushed"]
 let descriptions = ["a white", "an angry", "a scary", "a funny"]
 let sidekicks = ["Joe Biden", "chicken", "ghost", "frog"];
-let settings = ["at the ball room", "in the church"]
+let settings = ["at the ball room", "in the church", "in the white house"]
 
 // index to keep track of current selection
 let charIndex = 0;
@@ -35,7 +36,6 @@ buttons.forEach(button => {
 
 // funtion to map button clicked to the corresponding variable
 function cycleArray(sentencePart){
-    // storyResult.textContent = sentencePart;
     let word;
     switch (sentencePart){
         case "Character":
@@ -70,6 +70,7 @@ function cycleArray(sentencePart){
             word = "";
 
     }
+    // maps the button clicked to the appropriate p tag
     document.querySelector(`#${sentencePart.toLowerCase()}`).textContent = word;
 
 }
@@ -94,7 +95,7 @@ function resetStory(){
 resetBtn.addEventListener("click", resetStory)
 
 
-// random story
+// generate random story
 randomize.addEventListener("click", () =>
 {
     currentChar = characters[Math.floor(Math.random()*characters.length)]

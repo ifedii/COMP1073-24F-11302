@@ -57,7 +57,7 @@ body{
     justify-content: space-evenly;
 }
 
-#result, #randomize{
+#result, #randomize, #reset{
     width: 30%;
     font-size: 2rem;
     border-radius: 5px;

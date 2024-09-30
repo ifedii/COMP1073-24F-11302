@@ -44,6 +44,8 @@ body{
 .displaySelections p{
     margin: 0;
     font-size: 2rem;
+    height: 2rem;
+    padding: 0;
 
 }
 

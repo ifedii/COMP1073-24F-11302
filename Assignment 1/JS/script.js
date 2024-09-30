@@ -12,7 +12,6 @@ let actions = ["ran", "saw", "kicked", "pushed"]
 let descriptions = ["a white", "an angry", "a scary", "a funny"]
 let sidekicks = ["Joe Biden", "chicken", "ghost", "frog"];
 let settings = ["at the ball room", "in the church"]
-let story = ":character: :action: :description: :sidekick: :setting:";
 
 // index to keep track of current selection
 let charIndex = 0;
@@ -34,6 +33,7 @@ buttons.forEach(button => {
     
 });
 
+// funtion to map button clicked to the corresponding variable
 function cycleArray(sentencePart){
     // storyResult.textContent = sentencePart;
     let word;
@@ -75,31 +75,33 @@ function cycleArray(sentencePart){
 }
 
 // display result to the page
-displayResult.addEventListener("click", () => {
+function displayStory(){
     storyResult.textContent = `${currentChar} ${currentAction} ${currentDesc} ${currentSidekick} ${currentSetting} `;
+    console.log(currentChar)
 
-})
+}
+displayResult.addEventListener("click", displayStory)
 
 // reset funtion to reset the story on the page and the local variables
-resetBtn.addEventListener("click", () => {
+function resetStory(){
     storyResult.textContent = "";
 
     document.querySelectorAll(`.displaySelections p`).forEach(ptag => {
         ptag.textContent = "   ";
-        
     });
-})
+}
+
+resetBtn.addEventListener("click", resetStory)
 
 
 // random story
 randomize.addEventListener("click", () =>
 {
-    story = story.replace(":character:", characters[Math.floor(Math.random()*characters.length)])
-    story = story.replace(":action:", actions[Math.floor(Math.random()*actions.length)])
-    story = story.replace(":description:", descriptions[Math.floor(Math.random()*descriptions.length)])
-    story = story.replace(":sidekick:", sidekicks[Math.floor(Math.random()*sidekicks.length)])
-    story = story.replace(":setting:", settings[Math.floor(Math.random()*settings.length)])
+    currentChar = characters[Math.floor(Math.random()*characters.length)]
+    currentAction = actions[Math.floor(Math.random()*actions.length)]
+    currentDesc =  descriptions[Math.floor(Math.random()*descriptions.length)]
+    currentSidekick=  sidekicks[Math.floor(Math.random()*sidekicks.length)]
+    currentSetting = settings[Math.floor(Math.random()*settings.length)]
 
-    storyResult.textContent = story;
-    resetStory();
+   displayStory();
 })

@@ -1,6 +1,8 @@
 let storyResult = document.querySelector("#storyResult")
 let buttons = document.querySelectorAll(".cycle")
 let displayResult = document.querySelector("#result")
+let selection = document.querySelector("#selection")
+let reset = document.querySelector("#reset")
 
 let characters = ["Donald Trump", "Jackie Chan", "Santa Claus", "Will Smith"]
 let actions = ["ran", "saw", "kicked", "pushed"]
@@ -58,6 +60,7 @@ function cycleArray(sentencePart){
 
     }
 
+    selection.textContent = `${sentencePart}: ${word}`;
     capture(sentencePart, word)
 
 }
@@ -68,25 +71,33 @@ function capture(sentencePart, word){
             story = story.replace(":character:", word)
             break;
         case "Action":
-            story = story.replace(":character:", word)
+            story = story.replace(":action:", word)
             break;
         case "Description":
-            story = story.replace(":character:", word)
+            story = story.replace(":description:", word)
             break;
         case "Setting":
-            story = story.replace(":character:", word)
+            story = story.replace(":setting:", word)
             break;
         case "Sidekick":
-            story = story.replace(":character:", word)
+            story = story.replace(":sidekick:", word)
             break;
         default:
-            storyResult = "an error occured"
-        
-    
+            story = "an error occured"; 
 
     }
 }
 
 displayResult.addEventListener("click", () => {
-    storyResult = story
+    storyResult.textContent = story
+})
+
+reset.addEventListener("click", () =>{
+    story = ":character: :action: :description: :sidekick: :setting:";
+    storyResult.textContent = "";
+    charIndex = 0;
+    actionIndex = 0;
+    descIndex = 0;
+    sidekickIndex = 0;
+    settingIndex = 0;
 })

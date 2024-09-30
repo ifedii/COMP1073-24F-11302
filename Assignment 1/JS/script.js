@@ -84,7 +84,7 @@ displayResult.addEventListener("click", displayStory)
 
 // reset funtion to reset the story on the page and the local variables
 function resetStory(){
-    storyResult.textContent = "";
+    storyResult.textContent = " ";
 
     document.querySelectorAll(`.displaySelections p`).forEach(ptag => {
         ptag.textContent = "   ";

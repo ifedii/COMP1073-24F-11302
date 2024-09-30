@@ -2,7 +2,7 @@ let storyResult = document.querySelector("#storyResult")
 let buttons = document.querySelectorAll(".cycle")
 let displayResult = document.querySelector("#result")
 let selection = document.querySelector("#selection")
-let reset = document.querySelector("#reset")
+let resetBtn = document.querySelector("#reset")
 
 let characters = ["Donald Trump", "Jackie Chan", "Santa Claus", "Will Smith"]
 let actions = ["ran", "saw", "kicked", "pushed"]
@@ -89,15 +89,18 @@ function capture(sentencePart, word){
 }
 
 displayResult.addEventListener("click", () => {
-    storyResult.textContent = story
+    storyResult.textContent = story;
 })
 
-reset.addEventListener("click", () =>{
+function resetStory(){
     story = ":character: :action: :description: :sidekick: :setting:";
-    storyResult.textContent = "";
+    console.log("Hello");
     charIndex = 0;
     actionIndex = 0;
     descIndex = 0;
     sidekickIndex = 0;
     settingIndex = 0;
-})
+    storyResult.textContent = "";
+}
+
+resetBtn.addEventListener("click", resetStory)

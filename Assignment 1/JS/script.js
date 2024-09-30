@@ -17,8 +17,7 @@ let descIndex = 0;
 let sidekickIndex = 0;
 let settingIndex = 0;
 
-// storyResult.textContent = "Hello";
-
+// add event lister each button and pass in the text content to the cycle array function
 buttons.forEach(button => {
 
     button.addEventListener("click", (event) => cycleArray(event.target.textContent))
@@ -55,8 +54,6 @@ function cycleArray(sentencePart){
             break;
         default:
             word = "";
-        
-    
 
     }
 
@@ -88,12 +85,19 @@ function capture(sentencePart, word){
     }
 }
 
+// display the story on the page
 displayResult.addEventListener("click", () => {
-    storyResult.textContent = story;
+    if (story.includes(":")){
+        storyResult.textContent = "Pls complete your story";
+
+    } else{
+        storyResult.textContent = story;
+        story = ":character: :action: :description: :sidekick: :setting:";
+    }
 })
 
+// reset funtion to reset the story on the page and the local variables
 function resetStory(){
-    story = ":character: :action: :description: :sidekick: :setting:";
     console.log("Hello");
     charIndex = 0;
     actionIndex = 0;
@@ -101,6 +105,8 @@ function resetStory(){
     sidekickIndex = 0;
     settingIndex = 0;
     storyResult.textContent = "";
+    story = ":character: :action: :description: :sidekick: :setting:";
+
 }
 
 resetBtn.addEventListener("click", resetStory)

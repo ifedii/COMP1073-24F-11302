@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Smoothie Machine</title>
+
+    <!-- Style Sheet -->
+     <link rel="stylesheet" href="css/style.css">
+
+     <!-- javascript -->
+     <script src="js/script.js" defer></script>
+</head>
+<body>
+    <h1>Order Your Smoothie</h1>
+    <form action="submit_order.php" method="POST">
+        <!-- Smoothie Selection -->
+        <label for="flavor">Choose Your Smoothie Flavor:</label>
+        <select id="flavor" name="flavor" required>
+            <option value="">Select a flavor</option>
+            <option value="strawberry">Strawberry</option>
+            <option value="banana">Banana</option>
+            <option value="mango">Mango</option>
+            <option value="blueberry">Blueberry</option>
+        </select>
+        <br><br>
+
+        <!-- Size Selection -->
+        <label for="size">Choose Size:</label>
+        <select id="size" name="size" required>
+            <option value="">Select size</option>
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+        </select>
+        <br><br>
+
+        <!-- Add-ons -->
+        <label>Add-ons:</label><br>
+        <input type="checkbox" id="protein" name="addons" value="protein">
+        <label for="protein">Protein</label><br>
+        <input type="checkbox" id="chia" name="addons" value="chia_seeds">
+        <label for="chia">Chia Seeds</label><br>
+        <input type="checkbox" id="honey" name="addons" value="honey">
+        <label for="honey">Honey</label><br><br>
+
+        <!-- Quantity -->
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+        <br><br>
+
+        <!-- Customer Information -->
+        <h2>Your Details</h2>
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone">
+        <br><br>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit Order</button>
+    </form>
+</body>
+</html>

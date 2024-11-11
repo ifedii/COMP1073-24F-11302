@@ -7,6 +7,19 @@ class Smoothie {
         this.customerName = customerName;
         this.email = email;
     }
+
+    // Method to generate a description of the smoothie order
+    getDescription() {
+        let addonsDescription = this.addons.length > 0 ? this.addons.join(", ") : "No add-ons";
+        return `
+            Thank you, ${this.customerName}! Here’s your smoothie order:<br>
+            - Flavor: ${this.flavor}<br>
+            - Size: ${this.size}<br>
+            - Add-ons: ${addonsDescription}<br>
+            - Quantity: ${this.quantity}<br>
+            We’ll send a confirmation to ${this.email}.
+        `;
+    }
 }
 
 document.getElementById("smoothieForm").addEventListener("submit", function(event) {
@@ -25,4 +38,9 @@ document.getElementById("smoothieForm").addEventListener("submit", function(even
     
     //Create a Smoothie object
     const smoothieOrder = new Smoothie(flavor, size, addons, quantity, customerName, email);
+
+    // Display the smoothie order description
+    const orderSummary = document.getElementById("orderSummary");
+    orderSummary.innerHTML = smoothieOrder.getDescription();
+    orderSummary.style.display = "block";
 });

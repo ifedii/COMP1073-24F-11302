@@ -13,17 +13,21 @@
     align-items: center;
     height: 100vh;
     color: #333;
+    padding-top: 150px;
   }
 
   .container {
     width: 70%;
     max-width: 500px;
-    height: 95%;
+    height: fit-content;
     background-color: #ffffff;
     padding: 20px;
+    margin-top: 150px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+    display: flex;
+    flex-direction: column;
   }
 
   h1 {
@@ -38,12 +42,28 @@
     margin-bottom: 20px;
   }
   
+  /* form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  } */
+
   form label {
     font-weight: bold;
     display: block;
     margin: 10px 0 5px;     
     color: #444;
   }
+
+  form input, form select, form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+  }
+
   /* Modal Styles */
   .modal {
     display: none;

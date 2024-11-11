@@ -25,7 +25,7 @@ document.getElementById('toyCarDetails').addEventListener('submit', function(eve
     // Create a summary of the form data
     let confirmationText = '<ul>';
     for (let [key, value] of formData.entries()) {
-        confirmationText += `<li><strong>${key}:</strong> ${value}</li>`;
+        confirmationText += `<li><strong>${key.toString().toUpperCase()}:</strong> ${value}</li>`;
     }
     confirmationText += '</ul>';
 
@@ -48,7 +48,7 @@ document.getElementById('confirmButton').addEventListener('click', function() {
 
     // Hide the modal after confirming
     document.getElementById('confirmationModal').style.display = 'none';
-    
+
     // save data to DB
     console.log(newToyCar);
 

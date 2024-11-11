@@ -105,3 +105,52 @@
     justify-content: center;
     align-items: center;
   }
+
+  .modal-content {
+    background-color: #ffffff;
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .modal h3 {
+    color: #0077cc;
+    margin-bottom: 15px;
+  }
+
+  #confirmationDetails li{
+    list-style-type: none;
+    margin-top: 10px;
+  }
+  
+  #confirmButton, #cancelButton {
+    width: 45%;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 10px 5px;
+  }
+  
+  #confirmButton {
+    background-color: #0077cc;
+    color: #fff;
+  }
+  
+  #confirmButton:hover {
+    background-color: #005fa3;
+  }
+  
+  #cancelButton {
+    background-color: #ddd;
+    color: #333;
+  }
+  
+  #cancelButton:hover {
+    background-color: #bbb;
+  }

@@ -19,21 +19,19 @@ function ToyCar() {
 document.getElementById('toyCarDetails').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent actual form submission (we'll handle it)
     
-    // Collect form data (you can later send it to a server or save it locally)
-    const formData = new FormData(this);
-    let newToyCar = new ToyCar();
+    // Collect form data
+    const formData = new FormData(document.getElementById('toyCarDetails'));
 
-    // For demonstration, logging the data to console
+    // Create a summary of the form data
+    let confirmationText = '<ul>';
     for (let [key, value] of formData.entries()) {
-        console.log(`${key}: ${value}`);
-        newToyCar[key] = value;
+        confirmationText += `<li><strong>${key}:</strong> ${value}</li>`;
     }
+    confirmationText += '</ul>';
 
-    console.log(newToyCar);
+    // Insert the data into the confirmation div
+    document.getElementById('confirmationDetails').innerHTML = confirmationText;
 
-    // Example: Display a message or save the data
-    alert('Inventory saved successfully!');
-    
-    // Optionally, reset the form after saving
-    // this.reset();
+    // Show the confirmation modal
+    document.getElementById('confirmationModal').style.display = 'flex';
 });

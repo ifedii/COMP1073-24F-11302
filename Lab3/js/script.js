@@ -46,11 +46,11 @@ document.getElementById('confirmButton').addEventListener('click', function() {
         newToyCar[key] = value;
     }
 
-    // save data to DB
-    console.log(newToyCar);
-
     // Hide the modal after confirming
     document.getElementById('confirmationModal').style.display = 'none';
+    
+    // save data to DB
+    console.log(newToyCar);
 
     // document.getElementById('toyCarDetails').reset();
     alert('Inventory saved successfully!');

@@ -12,12 +12,15 @@ class Smoothie {
     getDescription() {
         let addonsDescription = this.addons.length > 0 ? this.addons.join(", ") : "No add-ons";
         return `
-            Thank you, ${this.customerName}! Here’s your smoothie order:<br>
-            - Flavor: ${this.flavor}<br>
-            - Size: ${this.size}<br>
-            - Add-ons: ${addonsDescription}<br>
-            - Quantity: ${this.quantity}<br>
-            We’ll send a confirmation to ${this.email}.
+            <h2>Your Smoothie Order Summary</h2>
+            <p><strong>Thank you, ${this.customerName}!</strong> Here’s your smoothie order:</p>
+            <ul>
+                <li><strong>Flavor:</strong> ${this.flavor}</li>
+                <li><strong>Size:</strong> ${this.size}</li>
+                <li><strong>Add-ons:</strong> ${addonsDescription}</li>
+                <li><strong>Quantity:</strong> ${this.quantity}</li>
+            </ul>
+            <p>We’ll send a confirmation to <strong>${this.email}</strong>.</p>
         `;
     }
 }

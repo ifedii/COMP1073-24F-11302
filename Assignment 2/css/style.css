@@ -77,12 +77,45 @@ button[type="submit"]:hover {
 }
 
 /* Order Summary Styling */
-.order-description {
-    font-size: 0.95em;
+.order-summary {
+    font-size: 1em;
     color: #333;
-    padding: 15px;
+    padding: 20px;
     border: 1px solid #ddd;
-    background-color: #fafafa;
+    background-color: #fff;
     border-radius: 8px;
-    margin-top: 20px;
+    margin-top: 30px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.order-summary h2 {
+    text-align: center;
+    color: #28a745;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.order-summary p {
+    margin: 10px 0;
+    font-size: 1em;
+}
+
+.order-summary ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.order-summary li {
+    margin: 5px 0;
+}
+
+.order-summary strong {
+    font-weight: bold;
+}
+
+.order-summary p strong {
+    color: #28a745;
 }

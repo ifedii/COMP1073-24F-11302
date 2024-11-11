@@ -35,3 +35,29 @@ document.getElementById('toyCarDetails').addEventListener('submit', function(eve
     // Show the confirmation modal
     document.getElementById('confirmationModal').style.display = 'flex';
 });
+
+// Handle Confirm Button Click (Save the Data)
+document.getElementById('confirmButton').addEventListener('click', function() {
+    const formData = new FormData(document.getElementById('toyCarDetails'));
+    let newToyCar = new ToyCar();
+
+    // Collect the form data into the newToyCar object
+    for (let [key, value] of formData.entries()) {
+        newToyCar[key] = value;
+    }
+
+    // save data to DB
+    console.log(newToyCar);
+
+    // Hide the modal after confirming
+    document.getElementById('confirmationModal').style.display = 'none';
+
+    // document.getElementById('toyCarDetails').reset();
+    alert('Inventory saved successfully!');
+});
+
+// Handle Cancel Button Click (Close the Confirmation Modal)
+document.getElementById('cancelButton').addEventListener('click', function() {
+    // Hide the modal and keep the user on the form
+    document.getElementById('confirmationModal').style.display = 'none';
+});

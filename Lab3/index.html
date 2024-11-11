@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toy Car - Speedster Racer</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Welcome to ModelToyCars Inventory Management</h1>
+        <h2>Creat a new car product and add it to Inventory</h2>
+
+        <form id="toyCarDetails">
+            <label for="sku"><strong>SKU:</strong></label>
+            <input type="text" id="sku" name="sku" required><br>
+        
+            <label for="upc"><strong>UPC:</strong></label>
+            <input type="text" id="upc" name="upc" required><br>
+        
+            <label for="carBrand"><strong>Car Brand:</strong></label>
+            <input type="text" id="carBrand" name="carBrand" required><br>
+        
+            <label for="carModel"><strong>Car Model:</strong></label>
+            <input type="text" id="carModel" name="carModel" required><br>
+        
+            <label for="price"><strong>Price:</strong></label>
+            <input type="number" id="price" name="price" step="0.01" required><br>
+        
+            <label for="color"><strong>Color:</strong></label>
+            <input type="text" id="color" name="color" required><br>
+        
+            <label for="ageRange"><strong>Age Range:</strong></label>
+            <select id="ageRange" name="ageRange" required>
+                <option value="0-3">0-3 years</option>
+                <option value="4-7">4-7 years</option>
+                <option value="8-12">8-12 years</option>
+                <option value="13-17">13-17 years</option>
+                <option value="18+">18+ years</option>
+            </select><br>
+        
+            <label for="packaging"><strong>Packaging:</strong></label>
+            <input type="text" id="packaging" name="packaging" required><br>
+        
+            <label for="scale"><strong>Scale:</strong></label>
+            <input type="text" id="scale" name="scale" required><br>
+        
+            <label for="vehicleType"><strong>Vehicle Type:</strong></label>
+            <input type="text" id="vehicleType" name="vehicleType" required><br>
+        
+            <label for="quantity"><strong>Quantity:</strong></label>
+            <input type="number" id="quantity" name="quantity" min="0" required><br>
+        
+            <label for="productDescription"><strong>Product Description:</strong></label>
+            <textarea id="productDescription" name="productDescription" rows="4" cols="50" required></textarea><br>
+        
+            <!-- Buttons -->
+            <button id="saveButton">Save Inventory</button>
+            <button id="clearButton">Clear Entries</button>
+        </form>
+        
+
+        
+
+    </div>
+
+</body>
+</html>

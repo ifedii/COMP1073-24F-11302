@@ -22,7 +22,7 @@
     height: fit-content;
     background-color: #ffffff;
     padding: 20px;
-    margin-top: 150px;
+    margin-top: 200px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -62,6 +62,35 @@
     border-radius: 5px;
     border: 1px solid #ddd;
     font-size: 1rem;
+  }
+
+  #saveButton, #clearButton {
+    width: 48%;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #saveButton {
+    background-color: #0077cc;
+    color: #fff;
+  }
+  
+  #saveButton:hover {
+    background-color: #005fa3;
+  }
+  
+  #clearButton {
+    background-color: #ddd;
+    color: #333;
+  }
+  
+  #clearButton:hover {
+    background-color: #bbb;
   }
 
   /* Modal Styles */

@@ -55,3 +55,34 @@ button[type="submit"] {
     cursor: pointer;
     transition: background-color 0.3s;
 }
+
+button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+.details,
+.contact {
+    margin-bottom: 20px;
+}
+
+.details {
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 20px;
+}
+
+.contact h2 {
+    margin-top: 0;
+    font-size: 1.2em;
+    color: #444;
+}
+
+/* Order Summary Styling */
+.order-description {
+    font-size: 0.95em;
+    color: #333;
+    padding: 15px;
+    border: 1px solid #ddd;
+    background-color: #fafafa;
+    border-radius: 8px;
+    margin-top: 20px;
+}
